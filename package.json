@@ -1,0 +1,15 @@
+{
+  "name": "metro_nz",
+  "version": "1.0.0",
+  "description": "redesigned home page and search features for metro nz",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Tergus & Vidyasagar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
