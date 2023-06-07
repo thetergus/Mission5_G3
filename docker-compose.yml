@@ -1,0 +1,29 @@
+# https://www.youtube.com/watch?v=vm3YfOHf_Cc
+
+services:
+  # MongoDB Service
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    ports:
+      - 2717:27017
+    volumes:
+      - mongo_db:/data/db
+
+  # Node API Service
+  api:
+    build: .
+    ports:
+      - 4000:3000 # localPort:containerPort
+    volumes:
+      - .:/app
+    environment:
+      PORT: 3000
+      MONGODB_URI_LOCAL: mongodb://mongo_db:27017/helloworld
+    depends_on:
+      - mongo_db
+# Volume for mongodb
+
+volumes:
+  mongo_db: {}
