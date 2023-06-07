@@ -15,6 +15,6 @@ import './3-models/db'
 env.config() // calling the environment variables from .env file
 
 const PORT = process.env.PORT
-app.listen(PORT || 3000, () => {
+app.listen(PORT || 4000, () => {
   console.log(`server started on port ${PORT}`)
 })
