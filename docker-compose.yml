@@ -1,29 +1,32 @@
 # https://www.youtube.com/watch?v=vm3YfOHf_Cc
+# To connect to our containerized mongodb, use the following...
+# # mongosh --port 2717
+# or connect to localhost port 2717 on MongoDB Compass
 
 services:
   # MongoDB Service
-  metro_mongo_db:
-    container_name: metro_db_container
+  mongo_db_metro:
+    # container_name: metro_db_container
     image: mongo:latest
     restart: always
     ports:
       - 2717:27017
     volumes:
-      - metro_db_volume:/data/db
+      - mongo_db_metro:/data/db
 
   # Node API Service
   metro_api:
     build: .
     ports:
-      - 4000:4000 # localPort:containerPort
+      - 4000:3000 # localPort:containerPort
     volumes:
       - .:/app
     environment:
       PORT: 3000
-      MONGODB_URI_LOCAL: mongodb://metro_mongo_db:27017/metrolistings
+      MONGODB_URI_LOCAL: mongodb://mongo_db_metro:27017/metrolistings
     depends_on:
-      - metro_mongo_db
+      - mongo_db_metro
 
 # Volume for mongodb
 volumes:
-  metro_db_volume: {}
+  mongo_db_metro: {}
