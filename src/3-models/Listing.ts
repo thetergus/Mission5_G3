@@ -17,7 +17,7 @@ const listingSchema: Schema = new mongoose.Schema({
     available_starting: { type: Date, required: true },
     bond: { type: Number, required: true },
     property_details: { type: String, required: true },
-    property_features: [{ feature: { type: String, required: true } }],
+    property_features: [{ feature: String }],
     viewing_dates_times: [{ date: Date, start_time: Date, end_time: Date }],
   },
 })
