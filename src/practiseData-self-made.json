@@ -1,0 +1,42 @@
+[
+  {
+    "listing_no": 4155856125,
+    "street_address": "practise road",
+    "pricepw": 500,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "carparks": 1,
+    "building_type": "Apartment",
+    "image_urls": [
+      { "url": "./images/Rental Listing Page - Images/Listing 1.png" },
+      {
+        "url": "./images/Rental Listing Page - Images/Listing 1 - Image 2.png"
+      },
+      {
+        "url": "./images/Rental Listing Page - Images/Listing 1 - Image 3.png"
+      },
+      { "url": "./images/Individual Listing - Images/3.png" }
+    ],
+    "featured": false,
+    "details": {
+      "available_starting": "2023-06-23T14:00:00.000Z",
+      "bond": 1450,
+      "property_details": "This charming home is located in a quiet and friendly neighbourhood, offering a comfortable and inviting living space. The property features 1 bedroom, 1 bathroom, and 1 car space.\nUpon entering, you'll be greeted by a warm and welcoming living area that is perfect for relaxing or entertaining guests. The well-designed kitchen is equipped with modern appliances, ample cabinet space, and a convenient layout, making it a joy to cook and prepare meals. \nThe bedroom is spacious and provide a peaceful retreat at the end of the day. The bathrooms are tastefully designed and offer both functionality and style.\nLocated in close proximity to public transportation, this home offers both comfort and convenience for everyday living.",
+      "property_features": [
+        { "feature": "Heated Towel Rack" },
+        { "feature": "Home Alarm" },
+        { "feature": "Air Conditioning" }
+      ],
+      "viewing_dates_times": [
+        {
+          "start_date_time": "2023-06-03T14:00:00.000Z",
+          "end_date_time": "2023-06-03T15:00:00.000Z"
+        },
+        {
+          "start_date_time": "2023-06-04T14:00:00.000Z",
+          "end_date_time": "2023-06-04T15:00:00.000Z"
+        }
+      ]
+    }
+  }
+]

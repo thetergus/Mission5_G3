@@ -1,4 +1,5 @@
 export interface IListing {
+  date_created: Date
   listing_no: number
   street_address: string
   pricepw: number
@@ -6,13 +7,14 @@ export interface IListing {
   bathrooms: number
   carparks: number
   building_type: string
-  image_urls: [{ url: string }]
+  image_urls?: [{ url: string }]
   liked: boolean
+  featured: boolean
   details: {
-    available_starting: Date
+    available_starting: string
     bond: number
     property_details: string
-    property_features: [{ feature: string }]
-    viewing_dates_times: [{ date: Date; start_time: Date; end_time: Date }]
+    property_features?: [{ feature: string }]
+    viewing_dates_times?: [{ start_date_time: string; end_date_time: string }]
   }
 }
