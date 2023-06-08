@@ -14,21 +14,26 @@ export const getOneListing = async (listingId: string) => {
   return matchedListing
 }
 
-// ----------------------- SORT BY ----------------------------//
 export const getNumberOfListings = async () => {
   return await Listing.countDocuments({})
 }
+
+// ----------------------- SORT BY ----------------------------//
 export const sortByFeatured = async () => {
-  return await Listing.find({}).sort({ featured: 1 })
+  // const all = await Listing.find({}).exec()
+  // console.log('All is ', all)
+  const query = Listing.find().sort({ featured: -1 })
+  const sortedListings = await query.exec()
+  return sortedListings
 }
 export const sortByHighestPrice = async () => {
-  return await Listing.find({}).sort({ pricepw: -1 })
+  return await Listing.find().sort({ pricepw: -1 })
 }
 export const sortByLowestPrice = async () => {
-  return await Listing.find({}).sort({ pricepw: 1 })
+  return await Listing.find().sort({ pricepw: 1 })
 }
 export const sortByNewest = async () => {
-  return await Listing.find({}).sort({ date_created: 1 })
+  return await Listing.find().sort({ date_created: 1 })
 }
 // export const sortByEarliestViewing = async () => {
 //   return await Listing.find({}).sort({ details.viewing_dates_times.date: 1 })

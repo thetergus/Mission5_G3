@@ -20,7 +20,7 @@ export const getOneListing = async (req: Request, res: Response) => {
 // ----------------------- SORT BY ----------------------------//
 export const sortByFeatured = async (req: Request, res: Response) => {
   const listingsByFeatured = await listingsServices.sortByFeatured()
-  res.json(listingsByFeatured)
+  res.send(listingsByFeatured)
 }
 export const sortByHighestPrice = async (req: Request, res: Response) => {
   const listingsByHighestPrice = await listingsServices.sortByHighestPrice()
